@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch', 
+    'ui.sortable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,9 +26,17 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/mesas', {
+        templateUrl: 'views/mesas.html',
+        controller: 'MesasCtrl'
+      })
+      .when('/estado', {
+        templateUrl: 'views/estado.html',
+        controller: 'EstadoCtrl'
+      })
+      .when('/certificado', {
+        templateUrl: 'views/certificado.html',
+        controller: 'CertificadoCtrl'
       })
       .otherwise({
         redirectTo: '/'

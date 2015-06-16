@@ -14,4 +14,15 @@ angular.module('fiApp')
       'Otra tarea ',
       'OOooootra mas'
     ];
+
+    $scope.addTarea = function(){
+    	$scope.tareas.push($scope.tarea);
+    	$scope.tarea = '';
+    };
+
+    $scope.eliminarTarea = function(index){
+    	$scope.tareas.splice(index, 1); //Splice es un método de java que permite eliminar un elemento del índice que se le indica
+    };
+
   });
+
