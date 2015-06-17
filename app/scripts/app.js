@@ -18,9 +18,19 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch', 
-    'ui.sortable'
+    'ui.sortable',
+    'LocalStorageModule'
   ])
+
+/* Esto lo usamos para el almacenamiento local */
+.config(['localStorageServiceProvider', function(localStorageServiceProvider){
+  localStorageServiceProvider.setPrefix('ls');
+  }])
+
   .config(function ($routeProvider) {
+
+    /* para generar una nueva página, ruta, no hace falta hacerlo a mano, usar la consola: yo angular:route tareas */
+    
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -37,6 +47,18 @@ angular
       .when('/certificado', {
         templateUrl: 'views/certificado.html',
         controller: 'CertificadoCtrl'
+      })
+      .when('/tareas', {
+        templateUrl: 'views/tareas.html',
+        controller: 'TareasCtrl'
+      })
+      .when('/estado', {
+        templateUrl: 'views/estado.html',
+        controller: 'EstadoCtrl'
+      })
+      .when('/biblioteca', {
+        templateUrl: 'views/biblioteca.html',
+        controller: 'BibliotecaCtrl'
       })
       .otherwise({
         redirectTo: '/'

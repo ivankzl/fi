@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name fiApp.controller:EstadoCtrl
+ * @name fiApp.controller:TareasCtrl
  * @description
- * # EstadoCtrl
+ * # TareasCtrl
  * Controller of the fiApp
  */
 angular.module('fiApp')
-  .controller('EstadoCtrl', function ($scope) {
+  .controller('TareasCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

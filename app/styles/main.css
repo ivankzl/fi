@@ -71,6 +71,7 @@ body {
   .footer {
     padding-left: 0;
     padding-right: 0;
+    margin-top: 15px;
   }
   /* Space out the masthead */
   .header {
@@ -80,4 +81,14 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
+}
+
+.bienvenida{
+  font-zise: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 60px;
 }
