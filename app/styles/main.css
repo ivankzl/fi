@@ -92,3 +92,16 @@ body {
   border-radius: 6px;
   padding: 60px;
 }
+
+.gridStyles{
+  width: 500px;
+  height: 200px;
+}
+
+.ngRow.odd{
+  background: #CCE5FF;
+}
+
+.ngRow.even{
+  background: #CCE5FF;
+}

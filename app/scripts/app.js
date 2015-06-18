@@ -19,7 +19,8 @@ angular
     'ngSanitize',
     'ngTouch', 
     'ui.sortable',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'ngGrid'
   ])
 
 /* Esto lo usamos para el almacenamiento local */
