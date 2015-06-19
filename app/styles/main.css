@@ -105,3 +105,9 @@ body {
 .ngRow.even{
   background: #CCE5FF;
 }
+
+.navbar-default {
+  background-color: #2769A1;
+  border-color: #2769A1;
+  text-color: white;
+}

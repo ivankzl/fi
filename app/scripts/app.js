@@ -23,10 +23,7 @@ angular
     'ngGrid'
   ])
 
-/* Esto lo usamos para el almacenamiento local */
-.config(['localStorageServiceProvider', function(localStorageServiceProvider){
-  localStorageServiceProvider.setPrefix('ls');
-  }])
+  
 
   .config(function ($routeProvider) {
 
@@ -60,6 +57,10 @@ angular
       .when('/biblioteca', {
         templateUrl: 'views/biblioteca.html',
         controller: 'BibliotecaCtrl'
+      })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
       })
       .otherwise({
         redirectTo: '/'
