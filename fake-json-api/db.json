@@ -1,0 +1,19 @@
+{
+    "api": [
+        {
+            "authentication": [
+                {
+                    "test": [
+                        {
+                            "test": [
+                                {
+                                    "status": 200
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

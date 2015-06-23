@@ -1,33 +1,23 @@
-(function () {
-    'use strict';
- 
-    angular
-        .module('app')
-        .controller('LoginController', LoginController);
- 
-    LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
-    function LoginController($location, AuthenticationService, FlashService) {
-        var vm = this;
- 
-        vm.login = login;
- 
-        (function initController() {
-            // reset login status
-            AuthenticationService.ClearCredentials();
-        })();
- 
-        function login() {
-            vm.dataLoading = true;
-            AuthenticationService.Login(vm.username, vm.password, function (response) {
+'use strict';
+
+angular.module('fiApp')
+
+.controller('LoginCtrl',
+    ['$scope', '$rootScope', '$location', 'AuthenticationService',
+    function ($scope, $rootScope, $location, AuthenticationService) {
+        // reset login status
+        AuthenticationService.ClearCredentials();
+
+        $scope.login = function () {
+            $scope.dataLoading = true;
+            AuthenticationService.Login($scope.username, $scope.password, function (response) {
                 if (response.success) {
-                    AuthenticationService.SetCredentials(vm.username, vm.password);
+                    AuthenticationService.SetCredentials($scope.username, $scope.password);
                     $location.path('/');
                 } else {
-                    FlashService.Error(response.message);
-                    vm.dataLoading = false;
+                    $scope.error = response.message;
+                    $scope.dataLoading = false;
                 }
             });
         };
-    }
- 
-})();
+    }]);
